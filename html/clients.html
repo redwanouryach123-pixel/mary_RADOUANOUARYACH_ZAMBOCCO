@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/clients.css">
+</head>
+
+<body>
+    <div class="sidebar">
+       <h2>Zambocco</h2>
+
+        <a href="index.html">Dashboard</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="invoices.html">Invoices</a>
+    </div>
+
+    <div class="main">
+    
+        <h1>Clients</h1>
+
+      
+
+        <div class="form-container">
+
+            <input type="text" placeholder="Client Name" id="fname">
+
+            <input type="text" placeholder="Phone" id="phone">
+
+            <input type="email" placeholder="Email" id="email1">
+
+            <input type="text" placeholder="Address" id="Address">
+
+            <button onclick="addClient()">Add Client</button>
+
+        </div>
+
+    
+
+        <div class="table-container">
+
+            <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="clientsTable"></tbody>
+</table>
+        </div>
+    </div>
+    </div>
+    <script src="../js/client.js"></script>
+</body>
+
+</html>

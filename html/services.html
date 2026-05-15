@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="../css/services.css">
+</head>
+<body>
+
+   
+
+    <div class="sidebar">
+
+        <h2>Zambocco</h2>
+
+        <a href="index.html">Dashboard</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="invoices.html">Invoices</a>
+
+    </div>
+
+   
+
+    <div class="main">
+
+        <h1>>Services</h1>
+
+        <div class="container">
+
+           
+
+            <div class="services-box">
+
+                <h2>Services List</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="table_services"></tbody>
+
+                </table>
+
+            </div>
+
+           
+
+            <div class="form-box">
+
+                <h2>Add New Service</h2>
+
+                <div class="form-group">
+                    <label>Service Name</label>
+
+                    <input id="service_name" type="text" placeholder="Enter service name">
+                </div>
+
+                <div class="form-group">
+                    <label>Price</label>
+
+                    <input  id="service_price" type="number" placeholder="Enter price">
+                </div>
+
+                <button class="addbtn" onclick="addservice()">Add Service</button>
+                <button class="addbtn remove" onclick="update()">
+                    Update
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+<script src="../js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices</title>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="../css/invoices.css">
+</head>
+
+<body>
+
+
+    <div class="sidebar">
+<h2>Zambocco</h2>
+
+        <a href="index.html">Dashboard</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="invoices.html">Invoices</a>
+
+    </div>
+
+
+
+    <div class="main">
+
+        <h1>Invoices</h1>
+
+        <div class="invoice-box" id="invoice">
+
+            <div class="top">
+
+                <div>
+                    <h2>Zambocco</h2>
+                </div>
+
+                <div>
+                    <p>Date: <span id="date"></span></p>
+                </div>
+
+            </div>
+
+
+
+            <div class="info">
+                <select id="clientSelect"></select>
+
+                <input type="text" id="clientName" placeholder="or add new client">
+            </div>
+
+
+
+            <table id="invoiceTable">
+
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price HT</th>
+                        <th>Quantity</th>
+                        <th>TVA</th>
+                        <th>Total TTC</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody"></tbody>
+
+            </table>
+
+            <div class="btns">
+
+                <button class="add btnpdf" onclick="addRow()">
+                    Add Service
+                </button>
+
+                <button class="pdf btnpdf" onclick="downloadPDF()">
+                    Export PDF
+                </button>
+
+            </div>
+
+            <div class="totals">
+
+                <p>
+                    Total HT :
+                    <span id="totalHT">0 DH</span>
+                </p>
+
+                <p>
+                    TVA (20%) :
+                    <span id="totalTVA">0 DH</span>
+                </p>
+
+                <h3>
+                    Total TTC :
+                    <span id="grandTotal">0 DH</span>
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/invoices.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+
+</html>

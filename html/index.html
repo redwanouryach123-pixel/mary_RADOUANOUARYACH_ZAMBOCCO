@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Warda Dashboard</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Zambocco</h2>
+
+        <a href="index.html">Dashboard</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="invoices.html">Invoices</a>
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <a href="invoices.html"><button>Create Invoice</button></a>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Clients</h3>
+                <h1 id="totalClients">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total Invoices</h3>
+                <h1 id="totalInvoices">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Revenue</h3>
+                <h1 id="revenue">0 DH</h1>
+            </div>
+
+        </div>
+
+
+        <div class="table-box">
+            <input type="text" id="search" placeholder="Search client..." oninput="searchInvoices()"
+>
+            <h2>Recent Invoices</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="invoiceBody">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+<script src="../js/index.js"></script>
+</body>
+
+</html>
