@@ -18,7 +18,6 @@ function afficher() {
 
     table.innerHTML = "";
 
-    
     clients.forEach(function(client, i) {
 
         
@@ -130,7 +129,4 @@ function clearForm() {
     addressInput.value = "";
     editingIndex = -1; 
 }
-
-
-
 afficher();

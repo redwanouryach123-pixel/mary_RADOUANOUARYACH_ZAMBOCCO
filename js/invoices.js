@@ -1,10 +1,7 @@
 
 let services = JSON.parse(localStorage.getItem("services")) || [];
 
-
 let clients = JSON.parse(localStorage.getItem("clients")) || [];
-
-
 
 let clientSelect = document.querySelector("#clientSelect");
 

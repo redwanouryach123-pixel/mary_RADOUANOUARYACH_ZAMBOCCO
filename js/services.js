@@ -1,9 +1,10 @@
+let services = JSON.parse(localStorage.getItem("services")) || [];
+
 let service_name = document.querySelector("#service_name");
 let service_price = document.querySelector("#service_price");
 let addbtn= document.querySelector(".addbtn")
-let btndelete= document.querySelector(".remove")
+let btndelete= document.querySelector(".update")
 
-let services = JSON.parse(localStorage.getItem("services")) || [];
 
 let txt = "";
 
