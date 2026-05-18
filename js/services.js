@@ -8,6 +8,9 @@ let btndelete= document.querySelector(".update")
 
 let txt = "";
 
+function savetostorage(){
+    localStorage.setItem("services",JSON.stringify(services));
+}
 
 let addservice = () => {
     
@@ -20,12 +23,10 @@ let addservice = () => {
 
     services.push(service);
 
-    localStorage.setItem("services",JSON.stringify(services));
-
+    savetostorage();
     afficher();
 
-    service_name.value = "";
-    service_price.value = "";
+    clearform();
 
 };
 
@@ -78,7 +79,7 @@ function removeService(idx){
 
     services.splice(idx,1);
 
-    localStorage.setItem("services",JSON.stringify(services));
+    savetostorage();
 
     afficher();
 
@@ -93,7 +94,7 @@ function toedit(idx){
     service_name.value = services[idx].name;
     service_price.value = services[idx].price;
 
-    localStorage.setItem("services",JSON.stringify(services));
+    savetostorage();
 }
 
 function update(){
@@ -103,11 +104,14 @@ function update(){
     services[pos].name = service_name.value
     services[pos].price = service_price.value
 
+    clearform()
+    savetostorage();
+    afficher()
+}
+
+function clearform(){
     service_name.value =""
     service_price.value =""
-
-    localStorage.setItem("services",JSON.stringify(services));
-    afficher()
 }
 
 afficher();
